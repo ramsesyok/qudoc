@@ -55,6 +55,7 @@ $endif$
   leading: 0.8em,
   spacing: 1.1em,
   justify: true,
+  first-line-indent: (amount: 1em, all: true),
 )
 
 // ---- 見出しスタイル ----
@@ -63,13 +64,10 @@ $if(section-numbering)$
 #set heading(numbering: "$section-numbering$")
 $endif$
 
-#show heading: it => {
-  block(above: 1.6em, below: 0.5em)[
-    #set text(size: 10.5pt, weight: "bold")
-    #it
-  ]
-  par(text(size: 0pt, ""))
-}
+#show heading: it => block(above: 1.6em, below: 0.5em)[
+  #set text(size: 10.5pt, weight: "bold")
+  #it
+]
 
 // ---- コードブロックスタイル (Skylightingなしの場合) ----
 #show raw.where(block: true): it => block(
