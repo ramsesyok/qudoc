@@ -1,0 +1,9 @@
+# Quarto ビルドキャッシュ
+.quarto/
+
+# 出力ディレクトリ
+_book/
+
+# 中間ファイル
+*.typ
+!template.typ

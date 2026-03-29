@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/ramse/quarto/share/**)",
+      "Bash(quarto render:*)",
+      "Bash(ls c:/Users/ramse/Documents/qudoc/*.typ)",
+      "Bash(find . -name *.typ ! -name template.typ ! -path ./.quarto/*)",
+      "Bash(/c/Users/ramse/quarto/bin/tools/pandoc.exe index.qmd -f markdown -t typst -s --template /c/Users/ramse/quarto/share/formats/typst/pandoc/typst.template -V title=\"技術文書プロジェクト\" -V author=\"Ramses Yok\" -V mainfont=\"Meiryo\" -V fontsize=\"10.5pt\" -V template=\"template.typ\")"
+    ]
+  }
+}

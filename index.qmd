@@ -1,0 +1,32 @@
+---
+title: "技術仕様書サンプル"
+---
+
+## はじめに
+
+この文書は、**Quarto**と**Typst**を利用して作成された技術文書のサンプルです。
+日本語フォントには「メイリオ」、英字フォントには「Consolas」が適用されています。
+
+## コードの表示
+
+以下のように、プログラムのコードもConsolasフォントで美しく表示されます。
+
+```python
+def hello_world():
+    # Consolas font will be applied here
+    print("Hello, Quarto with Typst!")
+```
+
+## 数式の表示
+
+Typstは数式のレンダリングも非常に高速です。
+
+$$
+f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d\xi
+$$
+
+## 箇条書きのテスト
+
+* フォントサイズは 10.5pt に設定されています。
+* HTMLとPDF(Typst)で同様のレイアウトが出力されます。
+* 日本語の「メイリオ」が正しく表示されることを確認してください。

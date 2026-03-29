@@ -1,0 +1,25 @@
+project:
+  type: book
+
+
+book:
+  title: "技術文書プロジェクト"
+  author: "Ramses Yok"
+  date: "2026/3/29"
+  date-format: "YYYY/M/D"
+  chapters:
+    - index.qmd
+
+format:
+  # Typst(PDF)出力の設定
+  typst:
+    number-sections: true
+    template: template.typ
+    mainfont: "Meiryo"
+    monofont: "Consolas"
+    fontsize: 10.5pt
+
+# 言語設定
+lang: ja
+
+
