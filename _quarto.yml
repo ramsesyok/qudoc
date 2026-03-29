@@ -15,6 +15,7 @@ format:
   typst:
     number-sections: true
     template: template.typ
+    docnumber: "TECH-2026-001"
     mainfont: "Meiryo"
     monofont: "Consolas"
     fontsize: 10.5pt

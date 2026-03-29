@@ -30,7 +30,9 @@ $endif$
       set text(size: 8.5pt, fill: luma(140))
 $if(title)$
       h(1fr)
-      [$title$]
+$if(docnumber)$
+      [$docnumber$]
+$endif$
       h(1em)
       counter(page).display("1 / 1", both: true)
 $endif$

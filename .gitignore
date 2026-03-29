@@ -7,3 +7,6 @@ _book/
 # 中間ファイル
 *.typ
 !template.typ
+
+/.quarto/
+**/*.quarto_ipynb
