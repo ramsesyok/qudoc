@@ -9,6 +9,7 @@ book:
   date-format: "YYYY/M/D"
   chapters:
     - index.qmd
+    - tables.qmd
 
 format:
   # Typst(PDF)出力の設定
@@ -19,6 +20,11 @@ format:
     mainfont: "Meiryo"
     monofont: "Consolas"
     fontsize: 10.5pt
+
+  # HTML出力の設定
+  html:
+    number-sections: true
+    toc: true
 
 # 言語設定
 lang: ja
