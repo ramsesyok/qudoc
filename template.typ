@@ -95,6 +95,7 @@ $endif$
   stroke: 0.5pt + luma(200),
 )
 #show table.cell.where(y: 0): set text(weight: "bold")
+#show table.cell.where(y: 0): set block(fill: luma(220))
 
 // ---- リスト設定 ----
 #set list(indent: 1em, body-indent: 0.6em)
