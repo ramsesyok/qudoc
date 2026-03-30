@@ -75,6 +75,13 @@ $endif$
   par(text(size: 0.001em, h(0em)))
 }
 
+// 見出しレベル1の前に自動改ページ
+#show heading.where(level: 1): it => {
+  pagebreak(weak: true)
+  v(0pt, weak: true)
+  it
+}
+
 // ---- 図表番号を「節番号-連番」形式（全レベル対応）----
 #set figure(numbering: (..nums) => context {
   let h = counter(heading).get()
@@ -132,11 +139,16 @@ $endfor$
 // タイトルページ
 // ============================================================
 $if(title)$
+
 #align(center + horizon)[
+  #align(left + horizon)[
+  #set text(size: 14pt, weight: "bold", fill: rgb("#1e293b"))
+  $docnumber$
+
   #set text(size: 26pt, weight: "bold", fill: rgb("#1e293b"))
   $title$
-  #v(6mm)
-  #line(length: 50%, stroke: 2.5pt + rgb("#1d4ed8"))
+  ]
+  #line(length: 100%, stroke: 2.5pt + rgb("#1d4ed8"))
   #v(10mm)
 $if(author)$
   #set text(size: 12pt, weight: "regular", fill: luma(80))
