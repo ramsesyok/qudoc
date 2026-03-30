@@ -65,12 +65,27 @@ $if(section-numbering)$
 $endif$
 
 #show heading: it => {
+  // 見出しが変わるたびに図・表のカウンタをリセット
+  counter(figure.where(kind: table)).update(0)
+  counter(figure.where(kind: image)).update(0)
   block(above: 1.6em, below: 0.5em)[
     #set text(size: 10.5pt, weight: "bold")
     #it
   ]
   par(text(size: 0.001em, h(0em)))
 }
+
+// ---- 図表番号を「節番号-連番」形式（全レベル対応）----
+#set figure(numbering: (..nums) => context {
+  let h = counter(heading).get()
+  // 末尾の 0 を除去して現在の深さだけ使う
+  let i = h.len()
+  while i > 0 and h.at(i - 1) == 0 {
+    i -= 1
+  }
+  let prefix = h.slice(0, i).map(str).join(".")
+  prefix + "-" + str(nums.pos().first())
+})
 
 // ---- コードブロックスタイル (Skylightingなしの場合) ----
 #show raw.where(block: true): it => block(
